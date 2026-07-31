@@ -68,6 +68,8 @@ LegalDraft AI is an AI-powered legal document generation platform that helps use
 - ✅ AI Agreement Generation
 - ✅ SQLite Database Integration
 - ✅ Save Agreement to Database
+- ✅ Agreement History
+- ✅ View Single Agreement
 
 ### Remaining in Phase 4
 
@@ -98,6 +100,8 @@ LegalDraft AI is an AI-powered legal document generation platform that helps use
 - ✅ 04 - API Design
 - ✅ 05 - Project Setup
 - ✅ 06 - Save Agreement Feature
+- ✅ 07 - Agreement-History
+- ✅ 08 - View-Single-Agreement
 
 ---
 
