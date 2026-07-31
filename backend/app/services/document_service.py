@@ -73,5 +73,5 @@ class DocumentService:
         db.commit()
 
         return {
-            "message": "Document deleted successfully"
+            "message": "Agreement deleted successfully."
         }

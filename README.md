@@ -70,7 +70,7 @@ LegalDraft AI is an AI-powered legal document generation platform that helps use
 - ✅ Save Agreement to Database
 - ✅ Agreement History
 - ✅ View Single Agreement
-
+- ✅ Delete Agreement
 ### Remaining in Phase 4
 
 - ⏳ Agreement History
@@ -102,6 +102,9 @@ LegalDraft AI is an AI-powered legal document generation platform that helps use
 - ✅ 06 - Save Agreement Feature
 - ✅ 07 - Agreement-History
 - ✅ 08 - View-Single-Agreement
+- ✅ 09 - Delete-Agreement
+
+
 
 ---
 
