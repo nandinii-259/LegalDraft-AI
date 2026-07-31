@@ -1,19 +1,22 @@
-# LegalDraft AI
+# ⚖️ LegalDraft AI
 
-LegalDraft AI is an AI-powered legal document generation platform that helps users create professional first-draft legal agreements using Google Gemini AI.
+LegalDraft AI is an AI-powered legal document generation platform that helps users create professional first-draft legal agreements using Google Gemini AI. The application enables users to generate, manage, store, and interact with legal documents using Artificial Intelligence.
 
 ---
 
 # Features
 
-- AI-powered legal agreement generation
+- AI-powered Legal Agreement Generation
 - Rental Agreement Generator
-- NDA Generator
 - Employment Agreement Generator
-- AI Assistant
-- PDF Export
-- Document History
-- Search Functionality
+- NDA Generator
+- AI Assistant (Chat with Agreement)
+- Agreement History
+- View Individual Agreement
+- Delete Agreement
+- SQLite Database Storage
+- RESTful API
+- Swagger API Documentation
 
 ---
 
@@ -21,8 +24,8 @@ LegalDraft AI is an AI-powered legal document generation platform that helps use
 
 ## Frontend
 
-- HTML
-- CSS
+- HTML5
+- CSS3
 - JavaScript
 
 ## Backend
@@ -33,7 +36,7 @@ LegalDraft AI is an AI-powered legal document generation platform that helps use
 ## Database
 
 - SQLite
-- SQLAlchemy
+- SQLAlchemy ORM
 
 ## AI
 
@@ -41,6 +44,8 @@ LegalDraft AI is an AI-powered legal document generation platform that helps use
 
 ## Other Tools
 
+- Pydantic
+- Uvicorn
 - ReportLab
 - Git
 - GitHub
@@ -49,76 +54,253 @@ LegalDraft AI is an AI-powered legal document generation platform that helps use
 
 # Project Status
 
-- ✅ Phase 1 — Requirements Gathering & Project Planning
-- ✅ Phase 2 — System Design
-- ✅ Phase 3 — Project Setup
-- ⏳ Phase 4 — Backend Development
+## ✅ Phase 1 — Requirements Gathering & Project Planning
 
-### Completed in Phase 4
+### Completed
 
-- ✅ FastAPI Project Setup
-- ✅ Configuration Management
-- ✅ Database Configuration
-- ✅ SQLAlchemy Models
-- ✅ Pydantic Schemas
-- ✅ API Routing
-- ✅ Service Layer
-- ✅ Prompt Templates
-- ✅ Gemini AI Integration
-- ✅ AI Agreement Generation
-- ✅ SQLite Database Integration
-- ✅ Save Agreement to Database
-- ✅ Agreement History
-- ✅ View Single Agreement
-- ✅ Delete Agreement
-### Remaining in Phase 4
+- Project Idea Finalized
+- Problem Statement
+- Scope Definition
+- Feature Planning
+- Technology Stack Selection
+- Project Architecture Planning
+- GitHub Repository Setup
 
-- ⏳ Agreement History
-- ⏳ View Single Agreement
-- ⏳ Delete Agreement
-- ⏳ AI Assistant
+---
+
+## ✅ Phase 2 — System Design
+
+### Completed
+
+- Software Architecture
+- Database Design
+- API Design
+- Folder Structure Design
+- Documentation Planning
+
+---
+
+## ✅ Phase 3 — Project Setup
+
+### Completed
+
+- Python Environment Setup
+- Virtual Environment
+- FastAPI Setup
+- SQLite Configuration
+- SQLAlchemy Setup
+- Gemini SDK Integration
+- VS Code Configuration
+- Dependency Installation
+- Initial Project Structure
+
+---
+
+## ✅ Phase 4 — Backend Development
+
+### Completed
+
+- FastAPI Project Structure
+- Configuration Management
+- Database Configuration
+- SQLAlchemy Models
+- Pydantic Schemas
+- API Routing
+- Service Layer
+- Prompt Templates
+- Gemini AI Integration
+- AI Agreement Generation
+- SQLite Database Integration
+- Save Agreement to Database
+- Agreement History
+- View Single Agreement
+- Delete Agreement
+
+---
+
+## 🚧 Phase 5 — AI Development
+
+### Completed
+
+- ✅ AI Assistant (Chat with Agreement)
+- ✅ Explain Legal Clauses
+
+### Remaining
+
 - ⏳ Improve Agreement
-- ⏳ Explain Clauses
-- ⏳ PDF Generation
-- ⏳ Exception Handling
-- ⏳ Logging
+- ⏳ Agreement Summarizer
+- ⏳ Risk Analysis
+- ⏳ Smart Suggestions
 
-- ⏳ Phase 5 — AI Development
-- ⏳ Phase 6 — Frontend Development
-- ⏳ Phase 7 — Additional Features
-- ⏳ Phase 8 — Testing
-- ⏳ Phase 9 — Deployment
-- ⏳ Phase 10 — Documentation & Interview Preparation
+## ⏳ Phase 6 — Frontend Development
+
+### Planned
+
+- Landing Page
+- Agreement Generator
+- Agreement History Page
+- View Agreement Page
+- AI Chat Interface
+- Responsive Design
+
+---
+
+## ⏳ Phase 7 — Additional Features
+
+### Planned
+
+- PDF Generation
+- Search Agreements
+- Download Agreements
+- User Dashboard
+- Error Handling
+- Logging
+
+---
+
+## ⏳ Phase 8 — Testing
+
+### Planned
+
+- API Testing
+- Integration Testing
+- Manual Testing
+- Bug Fixes
+- Performance Optimization
+
+---
+
+## ⏳ Phase 9 — Deployment
+
+### Planned
+
+- Backend Deployment
+- Frontend Deployment
+- Environment Variables
+- Production Configuration
+
+---
+
+## ⏳ Phase 10 — Documentation & Interview Preparation
+
+### Planned
+
+- Final Documentation
+- Architecture Diagram
+- API Documentation
+- Resume Project Description
+- GitHub Optimization
+- Interview Questions
+- Demo Video
+
+---
+
+# API Endpoints
+
+## Agreements
+
+| Method | Endpoint | Status |
+|---------|----------|--------|
+| POST | `/api/v1/agreements/generate` | ✅ |
+
+---
+
+## Documents
+
+| Method | Endpoint | Status |
+|---------|----------|--------|
+| GET | `/api/v1/documents` | ✅ |
+| GET | `/api/v1/documents/{id}` | ✅ |
+| DELETE | `/api/v1/documents/{id}` | ✅ |
+
+---
+
+## AI Assistant
+
+| Method | Endpoint | Status |
+|---------|----------|--------|
+| POST | `/api/v1/chat` | ✅ |
 
 ---
 
 # Documentation
 
-- ✅ 01 - Project Requirements
-- ✅ 02 - System Architecture
-- ✅ 03 - Database Design
-- ✅ 04 - API Design
-- ✅ 05 - Project Setup
-- ✅ 06 - Save Agreement Feature
-- ✅ 07 - Agreement-History
-- ✅ 08 - View-Single-Agreement
-- ✅ 09 - Delete-Agreement
+| Document | Status |
+|----------|--------|
+| 01 - Project Requirements | ✅ |
+| 02 - System Architecture | ✅ |
+| 03 - Database Design | ✅ |
+| 04 - API Design | ✅ |
+| 05 - Project Setup | ✅ |
+| 06 - Save Agreement Feature | ✅ |
+| 07 - Agreement History | ✅ |
+| 08 - View Single Agreement | ✅ |
+| 09 - Delete Agreement | ✅ |
+| 10 - AI Assistant | ✅ |
 
+---
 
+# Current Project Structure
+
+```
+LegalDraft-AI/
+│
+├── backend/
+│   ├── app/
+│   │   ├── api/
+│   │   ├── core/
+│   │   ├── database/
+│   │   ├── models/
+│   │   ├── prompts/
+│   │   ├── schemas/
+│   │   ├── services/
+│   │   └── utils/
+│   │
+│   ├── generated_pdfs/
+│   ├── uploads/
+│   ├── legaldraft.db
+│   ├── requirements.txt
+│   └── main.py
+│
+├── docs/
+│
+├── frontend/
+│
+├── .env
+├── .gitignore
+└── README.md
+```
 
 ---
 
 # Current Progress
 
-**Overall Project Completion:** **~60%**
+| Phase | Progress |
+|--------|----------|
+| Phase 1 | ✅ 100% |
+| Phase 2 | ✅ 100% |
+| Phase 3 | ✅ 100% |
+| Phase 4 | ✅ 100% |
+| Phase 5 | 🚧 In Progress |
+| Phase 6 | ⏳ Pending |
+| Phase 7 | ⏳ Pending |
+| Phase 8 | ⏳ Pending |
+| Phase 9 | ⏳ Pending |
+| Phase 10 | ⏳ Pending |
 
-**Current Phase:** **Phase 4 – Backend Development**
+---
+
+# Overall Project Completion
+
+**≈ 80% Complete**
 
 ---
 
 # Author
 
 **Nandini Agrawal**
+
+Final Year B.E. Electronics & Telecommunication Engineering Student
 
 ---
 
