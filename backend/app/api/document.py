@@ -4,7 +4,10 @@ from fastapi import APIRouter, Depends
 from sqlalchemy.orm import Session
 
 from app.database.database import get_db
-from app.schemas.document import DocumentResponse
+from app.schemas.document import (
+    DocumentResponse,
+    DocumentDetailResponse,
+)
 from app.services.document_service import DocumentService
 
 router = APIRouter(
@@ -23,7 +26,10 @@ def get_documents(
     return DocumentService.get_all(db)
 
 
-@router.get("/{document_id}")
+@router.get(
+    "/{document_id}",
+    response_model=DocumentDetailResponse,
+)
 def get_document(
     document_id: int,
     db: Session = Depends(get_db),
