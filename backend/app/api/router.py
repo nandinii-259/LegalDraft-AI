@@ -6,6 +6,7 @@ from app.api.document import router as document_router
 from app.api.explain import router as explain_router
 from app.api.improve import router as improve_router
 from app.api.summarize import router as summarize_router
+from app.api.risk import router as risk_router
 
 api_router = APIRouter()
 
@@ -32,4 +33,8 @@ api_router.include_router(
 
 api_router.include_router(
     summarize_router,
+)
+
+api_router.include_router(
+    risk_router,
 )

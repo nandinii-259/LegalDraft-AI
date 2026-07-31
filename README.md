@@ -118,7 +118,7 @@ LegalDraft AI is an AI-powered legal document generation platform that helps use
 
 ---
 
-## 🚧 Phase 5 — AI Development
+## ✅ Phase 5 — AI Development
 
 ### Completed
 
@@ -126,11 +126,7 @@ LegalDraft AI is an AI-powered legal document generation platform that helps use
 - ✅ Explain Legal Clauses
 - ✅ Improve Agreement
 - ✅ Agreement Summarizer
-
-### Remaining
-
-- ⏳ Risk Analysis
----
+- ✅ Risk Analysis
 
 ## ⏳ Phase 6 — Frontend Development
 
