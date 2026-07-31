@@ -6,3 +6,4 @@ sqlalchemy
 pydantic
 reportlab
 python-multipart
+pydantic-settings
