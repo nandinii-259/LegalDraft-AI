@@ -1,305 +1,243 @@
 # ⚖️ LegalDraft AI
 
-LegalDraft AI is an AI-powered legal document generation platform that helps users create professional first-draft legal agreements using Google Gemini AI. The application enables users to generate, manage, store, and interact with legal documents using Artificial Intelligence.
+An AI-powered legal agreement generation platform that enables users to generate professional legal documents, manage document history, download agreements as PDFs, and leverage AI-powered legal assistance such as clause explanation, agreement improvement, summarization, risk analysis, and document-based chat.
 
 ---
 
-# Features
+## 🚀 Features
 
-- AI-powered Legal Agreement Generation
-- Rental Agreement Generator
-- Employment Agreement Generator
-- NDA Generator
-- AI Assistant (Chat with Agreement)
-- Agreement History
-- View Individual Agreement
-- Delete Agreement
-- SQLite Database Storage
-- RESTful API
-- Swagger API Documentation
+### 📝 Agreement Generator
+- Generate legal agreements using Google Gemini AI
+- Rental Agreement support
+- Employment Agreement support
+- Non-Disclosure Agreement (NDA) support
+
+### 📂 Document Management
+- Save agreements in SQLite database
+- View agreement history
+- View individual agreements
+- Delete agreements
+
+### 📄 PDF Export
+- Download generated agreements as PDF
+- Print agreements directly from browser
+
+### 🤖 AI Workspace
+- Chat with Agreement
+- Explain Legal Clauses
+- Improve Agreement Language
+- Summarize Agreements
+- AI Risk Analysis
 
 ---
 
-# Tech Stack
+## 🛠 Tech Stack
 
-## Frontend
+### Frontend
+- React.js
+- Vite
+- Tailwind CSS
+- Axios
+- React Router DOM
+- React Markdown
+- React Toastify
+- Lucide React
 
-- HTML5
-- CSS3
-- JavaScript
-
-## Backend
-
-- Python
+### Backend
 - FastAPI
-
-## Database
-
+- Python
+- SQLAlchemy
 - SQLite
-- SQLAlchemy ORM
-
-## AI
-
 - Google Gemini API
-
-## Other Tools
-
-- Pydantic
-- Uvicorn
 - ReportLab
-- Git
-- GitHub
 
 ---
 
-# Project Status
-
-## ✅ Phase 1 — Requirements Gathering & Project Planning
-
-### Completed
-
-- Project Idea Finalized
-- Problem Statement
-- Scope Definition
-- Feature Planning
-- Technology Stack Selection
-- Project Architecture Planning
-- GitHub Repository Setup
-
----
-
-## ✅ Phase 2 — System Design
-
-### Completed
-
-- Software Architecture
-- Database Design
-- API Design
-- Folder Structure Design
-- Documentation Planning
-
----
-
-## ✅ Phase 3 — Project Setup
-
-### Completed
-
-- Python Environment Setup
-- Virtual Environment
-- FastAPI Setup
-- SQLite Configuration
-- SQLAlchemy Setup
-- Gemini SDK Integration
-- VS Code Configuration
-- Dependency Installation
-- Initial Project Structure
-
----
-
-## ✅ Phase 4 — Backend Development
-
-### Completed
-
-- FastAPI Project Structure
-- Configuration Management
-- Database Configuration
-- SQLAlchemy Models
-- Pydantic Schemas
-- API Routing
-- Service Layer
-- Prompt Templates
-- Gemini AI Integration
-- AI Agreement Generation
-- SQLite Database Integration
-- Save Agreement to Database
-- Agreement History
-- View Single Agreement
-- Delete Agreement
-
----
-
-## ✅ Phase 5 — AI Development
-
-### Completed
-
-- ✅ AI Assistant (Chat with Agreement)
-- ✅ Explain Legal Clauses
-- ✅ Improve Agreement
-- ✅ Agreement Summarizer
-- ✅ Risk Analysis
-
-## ⏳ Phase 6 — Frontend Development
-
-### Planned
-
-- Landing Page
-- Agreement Generator
-- Agreement History Page
-- View Agreement Page
-- AI Chat Interface
-- Responsive Design
-
----
-
-## ⏳ Phase 7 — Additional Features
-
-### Planned
-
-- PDF Generation
-- Search Agreements
-- Download Agreements
-- User Dashboard
-- Error Handling
-- Logging
-
----
-
-## ⏳ Phase 8 — Testing
-
-### Planned
-
-- API Testing
-- Integration Testing
-- Manual Testing
-- Bug Fixes
-- Performance Optimization
-
----
-
-## ⏳ Phase 9 — Deployment
-
-### Planned
-
-- Backend Deployment
-- Frontend Deployment
-- Environment Variables
-- Production Configuration
-
----
-
-## ⏳ Phase 10 — Documentation & Interview Preparation
-
-### Planned
-
-- Final Documentation
-- Architecture Diagram
-- API Documentation
-- Resume Project Description
-- GitHub Optimization
-- Interview Questions
-- Demo Video
-
----
-
-# API Endpoints
-
-## Agreements
-
-| Method | Endpoint | Status |
-|---------|----------|--------|
-| POST | `/api/v1/agreements/generate` | ✅ |
-
----
-
-## Documents
-
-| Method | Endpoint | Status |
-|---------|----------|--------|
-| GET | `/api/v1/documents` | ✅ |
-| GET | `/api/v1/documents/{id}` | ✅ |
-| DELETE | `/api/v1/documents/{id}` | ✅ |
-
----
-
-## AI Assistant
-
-| Method | Endpoint | Status |
-|---------|----------|--------|
-| POST | `/api/v1/chat` | ✅ |
-
----
-
-# Documentation
-
-| Document | Status |
-|----------|--------|
-| 01 - Project Requirements | ✅ |
-| 02 - System Architecture | ✅ |
-| 03 - Database Design | ✅ |
-| 04 - API Design | ✅ |
-| 05 - Project Setup | ✅ |
-| 06 - Save Agreement Feature | ✅ |
-| 07 - Agreement History | ✅ |
-| 08 - View Single Agreement | ✅ |
-| 09 - Delete Agreement | ✅ |
-| 10 - AI Assistant | ✅ |
-
----
-
-# Current Project Structure
+## 📁 Project Structure
 
 ```
 LegalDraft-AI/
-│
-├── backend/
+
+│── backend/
 │   ├── app/
-│   │   ├── api/
-│   │   ├── core/
-│   │   ├── database/
-│   │   ├── models/
-│   │   ├── prompts/
-│   │   ├── schemas/
-│   │   ├── services/
-│   │   └── utils/
-│   │
 │   ├── generated_pdfs/
-│   ├── uploads/
-│   ├── legaldraft.db
 │   ├── requirements.txt
 │   └── main.py
 │
-├── docs/
+│── frontend/
+│   ├── src/
+│   ├── package.json
+│   └── vite.config.js
 │
-├── frontend/
-│
-├── .env
-├── .gitignore
 └── README.md
 ```
 
 ---
 
-# Current Progress
+## ✨ Application Features
 
-| Phase | Progress |
-|--------|----------|
-| Phase 1 | ✅ 100% |
-| Phase 2 | ✅ 100% |
-| Phase 3 | ✅ 100% |
-| Phase 4 | ✅ 100% |
-| Phase 5 | 🚧 In Progress |
-| Phase 6 | ⏳ Pending |
-| Phase 7 | ⏳ Pending |
-| Phase 8 | ⏳ Pending |
-| Phase 9 | ⏳ Pending |
-| Phase 10 | ⏳ Pending |
+### 🏠 Home Page
+- Hero Section
+- Features Overview
+- How It Works
+
+### 📑 Agreement Generator
+- Dynamic Agreement Form
+- AI Generated Agreement
+- Copy Agreement
+- Download PDF
+- Print Agreement
+- Regenerate Agreement
+
+### 📚 Agreement History
+- View All Agreements
+- View Agreement Details
+- Delete Agreement
+
+### 🤖 AI Workspace
+- AI Chat
+- Clause Explanation
+- Agreement Improvement
+- Agreement Summarization
+- Risk Analysis
 
 ---
 
-# Overall Project Completion
+## ⚙️ Installation
 
-**≈ 80% Complete**
+### Clone Repository
+
+```bash
+git clone https://github.com/YOUR_USERNAME/LegalDraft-AI.git
+```
 
 ---
 
-# Author
+### Backend Setup
+
+```bash
+cd backend
+
+python -m venv .venv
+
+# Windows
+.venv\Scripts\activate
+
+pip install -r requirements.txt
+```
+
+Create a `.env` file inside the backend directory.
+
+```env
+GOOGLE_API_KEY=YOUR_GEMINI_API_KEY
+```
+
+Run Backend
+
+```bash
+uvicorn main:app --reload --port 8001
+```
+
+Swagger Documentation
+
+```
+http://127.0.0.1:8001/docs
+```
+
+---
+
+### Frontend Setup
+
+```bash
+cd frontend
+
+npm install
+
+npm run dev
+```
+
+Application
+
+```
+http://localhost:5173
+```
+
+---
+
+## 📸 Screenshots
+
+### Home Page
+
+_Add Screenshot_
+
+### Agreement Generator
+
+_Add Screenshot_
+
+### Generated Agreement
+
+_Add Screenshot_
+
+### Agreement History
+
+_Add Screenshot_
+
+### AI Workspace
+
+_Add Screenshot_
+
+---
+
+## 🔗 API Endpoints
+
+### Agreements
+
+- Generate Agreement
+
+### Documents
+
+- Get All Documents
+- Get Single Document
+- Delete Document
+- Download PDF
+
+### AI
+
+- Chat with Agreement
+- Explain Clause
+- Improve Agreement
+- Summarize Agreement
+- Risk Analysis
+
+---
+
+## 📈 Future Improvements
+
+- User Authentication
+- User Dashboard
+- Multiple Agreement Templates
+- Digital Signatures
+- Cloud Database
+- Deployment
+- Search & Filter Agreements
+- Responsive UI Enhancements
+
+---
+
+## 👩‍💻 Author
 
 **Nandini Agrawal**
 
-Final Year B.E. Electronics & Telecommunication Engineering Student
+Final Year Electronics & Telecommunication Engineering Student
+
+Interested in:
+- AI Engineering
+- Full Stack Development
+- Machine Learning
+- Generative AI
 
 ---
 
-# License
+## ⭐ If you like this project
 
-This project is developed for educational and portfolio purposes.
+Please consider giving this repository a ⭐ on GitHub.
