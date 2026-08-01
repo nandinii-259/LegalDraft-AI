@@ -4,6 +4,14 @@ An AI-powered legal agreement generation platform that enables users to generate
 
 ---
 
+## 🚀 Demo
+
+You can try the application here:
+
+👉 https://legal-draft-ai-five.vercel.app
+
+---
+
 ## 🚀 Features
 
 ### 📝 Agreement Generator
