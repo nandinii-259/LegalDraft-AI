@@ -5,7 +5,7 @@ from app.api.router import api_router
 from app.core.config import settings
 from app.database.database import Base, engine
 
-# Create database tables
+# Create database tables automatically
 Base.metadata.create_all(bind=engine)
 
 app = FastAPI(
@@ -19,15 +19,17 @@ app.add_middleware(
     CORSMiddleware,
     allow_origins=[
         "http://localhost:5173",
-        "https://legaldraft-ai.vercel.app",
-        "https://*.vercel.app",
+        "http://127.0.0.1:5173",
+        "https://legal-draft-ai-five.vercel.app",
     ],
+    allow_origin_regex=r"https://.*\.vercel\.app",
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
 )
 
 app.include_router(api_router)
+
 
 @app.get("/")
 def root():
