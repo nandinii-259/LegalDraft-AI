@@ -1,6 +1,7 @@
 from sqlalchemy.orm import Session, joinedload
 
 from app.models.document import Document
+from app.services.pdf_service import PDFService
 
 
 class DocumentService:
@@ -75,3 +76,23 @@ class DocumentService:
         return {
             "message": "Agreement deleted successfully."
         }
+
+    @staticmethod
+    def generate_pdf(document_id: int, db: Session):
+
+        document = (
+            db.query(Document)
+            .filter(Document.id == document_id)
+            .first()
+        )
+
+        if document is None:
+            return None
+
+        pdf_path = PDFService.generate(
+            document.id,
+            document.title,
+            document.generated_content,
+        )
+
+        return pdf_path

@@ -1,9 +1,42 @@
 import os
+import re
+from xml.sax.saxutils import escape
+
 from reportlab.lib.styles import getSampleStyleSheet
 from reportlab.platypus import Paragraph, SimpleDocTemplate
 
 
 class PDFService:
+
+    @staticmethod
+    def clean_text(text: str) -> str:
+        """
+        Clean Gemini markdown so ReportLab can render it safely.
+        """
+
+        if not text:
+            return ""
+
+        # Remove markdown headings
+        text = re.sub(r"^#{1,6}\s*", "", text, flags=re.MULTILINE)
+
+        # Remove markdown bold/italic
+        text = text.replace("**", "")
+        text = text.replace("__", "")
+        text = text.replace("*", "")
+
+        # Remove markdown separators
+        text = text.replace("---", "")
+
+        # Remove HTML line breaks
+        text = text.replace("<br>", "")
+        text = text.replace("<br/>", "")
+        text = text.replace("<br />", "")
+
+        # Escape HTML characters
+        text = escape(text)
+
+        return text
 
     @staticmethod
     def generate(document_id: int, title: str, content: str):
@@ -18,22 +51,29 @@ class PDFService:
 
         story = []
 
-        story.append(Paragraph(f"<b>{title}</b>", styles["Heading1"]))
+        story.append(
+            Paragraph(
+                f"<b>{escape(title)}</b>",
+                styles["Heading1"],
+            )
+        )
 
-        story.append(Paragraph("<br/><br/>", styles["BodyText"]))
+        story.append(
+            Paragraph(" ", styles["BodyText"])
+        )
 
-        # Remove markdown formatting
-        content = content.replace("**", "")
-        content = content.replace("##", "")
-        content = content.replace("---", "")
+        cleaned_content = PDFService.clean_text(content)
 
-        for line in content.split("\n"):
+        for line in cleaned_content.split("\n"):
 
-            if line.strip():
+            line = line.strip()
 
-                story.append(
-                    Paragraph(line, styles["BodyText"])
-                )
+            if not line:
+                continue
+
+            story.append(
+                Paragraph(line, styles["BodyText"])
+            )
 
         doc.build(story)
 
